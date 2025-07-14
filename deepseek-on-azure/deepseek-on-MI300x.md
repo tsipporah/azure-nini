@@ -1,6 +1,9 @@
 # Run deepseek on MI300X
 https://techcommunity.microsoft.com/blog/azurehighperformancecomputingblog/running-deepseek-r1-on-a-single-ndv5-mi300x-vm/4372726
 
+https://rocm.blogs.amd.com/artificial-intelligence/DeepSeekR1-Part2/README.html
+
+
 
 ## Create and config VM
 
