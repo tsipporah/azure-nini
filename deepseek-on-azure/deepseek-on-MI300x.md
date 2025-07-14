@@ -1,4 +1,4 @@
-# Run deepseek on MI300
+# Run deepseek on MI300X
 https://techcommunity.microsoft.com/blog/azurehighperformancecomputingblog/running-deepseek-r1-on-a-single-ndv5-mi300x-vm/4372726
 
 
@@ -69,7 +69,18 @@ evalscope perf \ --url http://xxxxxxx:30000/v1/chat/completions\ --model "deepse
 
 ## perf improvement
 1.Increased the CPU and memory allocation for the SGLang container. While this does not directly improve performance significantly, it helps somewhat when the throughput reaches its limit.
+
 2.Enhanced the SGLang container's utilization of the NVMe disk, which also led to some performance improvement.
+
 3.nabling the --enable-dp-attention option can improve overall throughput, though the effect is not as noticeable under low concurrency conditions.
 
-![alt text](./imgs/perf.png)
+![alt text](imgs/perf.png)
+
+## vLLM / TensorRT-LLM / SGlang
+[Achieving Faster Open-Source Llama3 Serving with SGLang Runtime (vs. TensorRT-LLM, vLLM)](https://lmsys.org/blog/2024-07-25-sglang-llama3/)
+
+* TensorRT-LLM 是nvidia的框架，只支持nvidia.
+
+
+![](https://lmsys.org/images/blog/sglang_llama3/8b_throughput.svg)
+
