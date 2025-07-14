@@ -87,3 +87,7 @@ evalscope perf \ --url http://xxxxxxx:30000/v1/chat/completions\ --model "deepse
 
 ![](https://lmsys.org/images/blog/sglang_llama3/8b_throughput.svg)
 
+
+
+#Other related: deepseek on H200
+https://datacrunch.io/blog/deploy-deepseek-r1-on-8x-nvidia-h200
