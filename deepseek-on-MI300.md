@@ -71,3 +71,5 @@ evalscope perf \ --url http://xxxxxxx:30000/v1/chat/completions\ --model "deepse
 1.Increased the CPU and memory allocation for the SGLang container. While this does not directly improve performance significantly, it helps somewhat when the throughput reaches its limit.
 2.Enhanced the SGLang container's utilization of the NVMe disk, which also led to some performance improvement.
 3.nabling the --enable-dp-attention option can improve overall throughput, though the effect is not as noticeable under low concurrency conditions.
+
+![alt text](./imgs/perf.png)
