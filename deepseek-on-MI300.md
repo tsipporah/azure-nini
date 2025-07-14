@@ -59,8 +59,15 @@ docker run \
   --tp 8 trust-remote-code --host 0.0.0.0
 ```
 
-## perf test
+## perf test with evalscope
+https://evalscope.readthedocs.io/zh-cn/latest/get_started/basic_usage.html
+
 ```
 evalscope perf \ --url http://xxxxxxx:30000/v1/chat/completions\ --model "deepseek-ai/DeepSeek-R1" \--parallel 5 \--number 20 \--api openai \--min-prompt-length 10000 \--dataset "longalpaca" \--max-tokens 2048 \--min-tokens 2048 \--stream
 
 ```
+
+## perf improvement
+1.Increased the CPU and memory allocation for the SGLang container. While this does not directly improve performance significantly, it helps somewhat when the throughput reaches its limit.
+2.Enhanced the SGLang container's utilization of the NVMe disk, which also led to some performance improvement.
+3.nabling the --enable-dp-attention option can improve overall throughput, though the effect is not as noticeable under low concurrency conditions.
